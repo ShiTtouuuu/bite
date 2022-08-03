@@ -9,6 +9,7 @@
 
 //323起为练习
 //20.在一个有序数组中查找具体的某个数字n
+//21. welcome to bit!!!!!
 
 //1.奇数判定0 - 100
 /*
@@ -371,34 +372,151 @@ int main(void) {
 
 //20.在一个有序数组中查找具体的某个数字n
 //二分查找
-int main(void) {
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,24  };
-	int k = 0;//初始化
-	printf("what you want?\n");
-	scanf("%d", &k);  
-			  //输入要搜索的数字
-	int sz = sizeof(arr) / sizeof(arr[0]);//数组的元素个数
+//int main(void) {
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,24  };
+//	int k = 0;//初始化
+//	printf("what you want?\n");
+//	scanf("%d", &k);  
+//			  //输入要搜索的数字
+//	int sz = sizeof(arr) / sizeof(arr[0]);//数组的元素个数
+//
+//	int left = 0;
+//	int right = sz - 1;
+//	//循环二分查找
+//	while(left <= right) {
+//		int mid = (left + right) / 2;
+//		if (arr[mid] < k) {//数字在中间数右边
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > k) {//数字在中间数左边
+//			right = mid - 1;
+//		}
+//		else {
+//			printf("找到了，下标是:%d\n", mid);
+//			break;
+//		}
+//	}
+//	if (left > right) {//没有这个数字
+//		printf("找不到你想要的数字\n");
+//	}
+//	return 0;
+//}
+ 
 
-	int left = 0;
-	int right = sz - 1;
-	//循环二分查找
-	while(left <= right) {
-		int mid = (left + right) / 2;
-		if (arr[mid] < k) {//数字在中间数右边
-			left = mid + 1;
+//21. welcome to bit!!!!!
+//#include <windows.h>
+//
+//int main(void) {
+//
+//	char arr1[] = "welcome to bite!!!!";
+//	char arr2[] = "###################";
+//	int left = 0;
+//	int right = strlen(arr1) - 1;
+//
+//	while (left <= right) {
+//		arr2[left] = arr1[left];
+//		arr2[right] = arr1[right];
+//		printf("%s\n", arr2);
+//		Sleep(1000);//时间控制
+//		system("cls");//屏幕清空
+//		left++;
+//		right--;
+//	}
+//	printf("%s\n", arr2);
+//
+//	return 0;
+//}
+
+//#include <string.h>
+//int main(void) {
+//	int i = 0;
+//	char password[20] = { 0 };
+//
+//	for (i = 0; i < 3; i++) {
+//
+//		printf("password:");
+//		scanf("%s", password);
+//		if (strcmp(password, "123456") == 0) {
+//			printf("sucsessful\n");
+//			break;
+//		}
+//		else
+//		{
+//			printf("password false\n");
+//		}
+//	}
+//	if (i == 3) {
+//		printf("false,quit.\n");
+//	}
+//
+//	return 0;
+//}
+
+
+#include <stdlib.h>
+#include <time.h>
+//猜数字游戏
+//自动产生一个随机数
+
+void menu() {
+	printf("******************************\n");
+	printf("******		1. play		******\n");
+	printf("******		2. exit		******\n");
+	printf("******************************\n");
+}
+
+void game() {
+	int ret = rand() % 100 + 1;
+	//printf("%d\n", ret);
+	int guess = 0;
+
+	// rand function 0~32767
+
+	while (1) {
+		printf("cai shu zi:");
+		scanf_s("%d", &guess);
+		if (guess < ret) {
+			printf("猜小了\n");
 		}
-		else if (arr[mid] > k) {//数字在中间数左边
-			right = mid - 1;
+		else if (guess > ret) {
+			printf("猜大了\n");
 		}
 		else {
-			printf("找到了，下标是:%d\n", mid);
+			printf("bingo\n");
 			break;
 		}
 	}
-	if (left > right) {//没有这个数字
-		printf("找不到你想要的数字\n");
-	}
+}
+
+int mian() {
+
+	int input = 0;
+	srand((unsigned int)time(NULL));
+
+	do {
+		menu();
+		printf("cai shu zi\n");
+		scanf_s("%d", &input);
+
+		switch (input) {
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("exit\n");
+			break;
+		default:
+			printf("err , choise again\n");
+			break;
+		}
+
+	} while (input);
 	return 0;
 }
 
-
+//int main(void) {
+//
+//
+//
+//	return 0;
+//}
