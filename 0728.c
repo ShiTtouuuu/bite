@@ -25,6 +25,7 @@ int main(void) {
 */
 
 
+//					switch语句
 //2.switch date test
 /*
 int main() {
@@ -66,6 +67,8 @@ int main() {
 //3.switch test
 // what is "m" and "n"?
 /*
+
+//							逻辑test
 int main(void) {
 	int n = 1;
 	int m = 2;
@@ -95,7 +98,7 @@ int main(void) {
 }
 */
 
-//4.while loop
+//4.							while loop
 /*
 int main(void) {
 
@@ -127,7 +130,7 @@ int main(void) {
  */
 
 
-//5.getchar
+//							5.getchar
 //int main(void) {
 //
 //	int ch = getchar();
@@ -137,7 +140,7 @@ int main(void) {
 //}
 
 
-//getchar putchar
+//						getchar putchar
 //int main() {
 //	// ctrl + z  end system
 //	int ch = 0;
@@ -150,6 +153,7 @@ int main(void) {
 //}
 
 
+//						getchar的例子 登录程序
 //6.password system
 //int main(void) {
 //
@@ -183,6 +187,7 @@ int main(void) {
 //}
 
 
+//							getchar语句
 //7.int main(void) {
 //
 //	int ch = 0;
@@ -198,6 +203,7 @@ int main(void) {
 //}
 
 
+//								while语句
 //8.int main(void) {
 //
 //	int i = 1;//初始化
@@ -214,6 +220,7 @@ int main(void) {
 //}
 
 
+//								逻辑test
 //9.int main(void) {
 //
 //	int i = 0;
@@ -230,6 +237,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //10.int main() {
 //
 //	int i = 0;
@@ -247,6 +255,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //11.int main(void) {
 //
 //	int arr[10] = { 0 };
@@ -258,6 +267,7 @@ int main(void) {
 //
 //}
 
+//								逻辑test
 //12.int main() {
 //	//判断部分的省略 - 判断部分恒为真
 //	for (;;) {
@@ -267,6 +277,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //13.int main() {
 //	// 9 times
 //	int i = 0;
@@ -280,6 +291,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //14.int main() {
 //	// 3 times
 //	int i = 0;
@@ -293,6 +305,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //15.int main(void) {
 //	int i = 0;
 //	int k = 0;
@@ -323,7 +336,7 @@ int main(void) {
 
 //17.while for do while
 
-//18. 一个数字的阶乘
+//							18. 一个数字的阶乘
 //int main(void) {
 //	int i,n;
 //	int fact = 1;
@@ -339,7 +352,7 @@ int main(void) {
 //	return 0;
 //}
 
-//19. 1 - 10 的阶乘
+//						19. 1 - 10 的阶乘
 //int main(void) {
 //	int i,n;
 //	int fact = 1;
@@ -370,7 +383,7 @@ int main(void) {
 //}
 
 
-//20.在一个有序数组中查找具体的某个数字n
+//					20.在一个有序数组中查找具体的某个数字n
 //二分查找
 //int main(void) {
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,24  };
@@ -403,6 +416,7 @@ int main(void) {
 //}
  
 
+//								动态字符效果
 //21. welcome to bit!!!!!
 //#include <windows.h>
 //
@@ -427,6 +441,8 @@ int main(void) {
 //	return 0;
 //}
 
+
+//									登录程序
 //#include <string.h>
 //int main(void) {
 //	int i = 0;
@@ -452,7 +468,7 @@ int main(void) {
 //	return 0;
 //}
 
-
+//								猜数字游戏
 //#include <stdlib.h>
 //#include <time.h>
 ////猜数字游戏
@@ -514,7 +530,8 @@ int main(void) {
 //	return 0;
 //}
 
-//test
+
+//								逻辑test
 //int main(void) {
 //	int i = 0;
 //	for (i = 0; i < 10; i++) {
@@ -525,6 +542,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								逻辑test
 //int func(int a) {
 //
 //	int b;
@@ -544,6 +562,7 @@ int main(void) {
 //}
 
 
+//								输入3个数 自动排序
 //int main() {
 //	int a = 0;
 //	int b = 0;
@@ -569,6 +588,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								最大公约数
 //int main() {
 //	int m = 0;
 //	int n = 0;
@@ -594,6 +614,7 @@ int main(void) {
 //	return 0;
 //}
 
+//								最大公约数
 //int mian(void) {
 //	int m = 0;
 //	int n = 0;
@@ -609,8 +630,182 @@ int main(void) {
 //}
 
 
+//								run nian
+// 
+//int main() {
+//	int y = 0;
+//	int count = 0;
+//	for (y = 1000; y <= 2000; y++) {
+//		if (y % 4 == 0) {
+//
+//			if (y % 100 != 0) {
+//				printf("%d ", y);
+//				count++;
+//			}
+//		}
+//		if (y % 400 == 0) {
+//			printf("%d ", y);
+//			count++;
+//		}
+//	}
+//	printf("\ntotal:%d", count);
+//	return 0;
+//}
+
+//int main() {
+//	int y = 0;
+//	int count = 0;
+//
+//	for (y = 1000; y <= 2000; y++) {
+//		if (((y % 4 == 0) && (y % 100 != 0)) || (y% 400 == 0)) {
+//			// && - and , || - or
+//			printf("%d ", y);
+//			count++;
+//		}
+//	}
+//	printf("total:%d", count);
+//
+//	return 0;
+//}
+
+
+// su shu
+//								素数1.0
+// 
+//int main() {
+//	define
+//	int i = 0;
+//	for (i = 100; i <= 200; i++) {
+//
+//		int j = 0;
+//		for (j = 2; j < i; j++) {
+//
+//			if (i % j == 0) {
+//				break;
+//			}
+//		}
+//		if (i == j) {
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+//								素数2.0
+//
+// 
+//int main() {
+// //define
+//	int i = 0;
+//	int count = 0;
+//
+//	for (i = 100; i <= 200; i++) {
+//		int j = 0;
+//		int flag = 1;
+//
+//		for (j = 2; j < i; j++) {
+//
+//			if (i % j == 0) {
+//
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if (flag == 1) {
+//
+//			printf("%d ", i);
+//			count++;
+//		}
+//	}
+//	printf("\ntotal:%d", count);
+//	return 0;
+//}
+
+
+//								素数3.0
+//sqrt  ルート
+//#include <math.h>
+//int main() {
+//	//define
+//	int i = 0;
+//	int count = 0;
+//
+//	for (i = 101; i <= 200; i += 2) {
+//		int j = 0;
+//		int flag = 1;
+//
+//		for (j = 2; j <= sqrt(i); j++) {
+//
+//			if (i % j == 0) {
+//
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if (flag == 1) {
+//
+//			printf("%d ", i);
+//			count++;
+//		}
+//	}
+//	printf("\ntotal:%d", count);
+//
+//	return 0;
+//}
+
+
+//								goto 
+//int main() {
+//
+//	flag:
+//	printf("2\n");
+//	printf("3\n");
+//
+//	goto flag;
+//
+//	return 0;
+//}
+
+//#include <stdlib.h>
+//#include <string.h>
+//int main() {
+//	//シャットダウン　システム
+//	//shutdown -s -t 60
+//	
+//	char input[20] = { 0 };
+//
+//	system("shutdown -s -t 60");
+//
+//again:
+//	printf("warming, shutdown before 1min, enter 123\n");
+//	scanf("%s", input);
+//	if (strcmp(input,"123")) {
+//		system("shutdown -a");
+//	}
+//	else {
+//		goto again;
+//	}
+//	return 0;
+//}
+
+#include <stdlib.h>
+#include <string.h>
 int main() {
+	//シャットダウン　システム
+	//shutdown -s -t 60
 
+	char input[20] = { 0 };
 
+	system("shutdown -s -t 60");
+
+	while (1) {
+		printf("warming, shutdown before 1min, enter 123\n");
+		scanf("%s", input);
+		if (strcmp(input, "123")) {
+			system("shutdown -a");
+			break;
+		}
+	}
 	return 0;
 }
