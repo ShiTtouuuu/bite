@@ -453,70 +453,164 @@ int main(void) {
 //}
 
 
-#include <stdlib.h>
-#include <time.h>
-//猜数字游戏
-//自动产生一个随机数
+//#include <stdlib.h>
+//#include <time.h>
+////猜数字游戏
+////自动产生一个随机数
+//
+//void menu() {
+//	printf("******************************\n");
+//	printf("******		1. play		******\n");
+//	printf("******		2. exit		******\n");
+//	printf("******************************\n");
+//}
+//
+//void game() {
+//	int ret = rand() % 100 + 1;
+//	//printf("%d\n", ret);
+//	int guess = 0;
+//
+//	// rand function 0~32767
+//
+//	while (1) {
+//		printf("cai shu zi:");
+//		scanf_s("%d", &guess);
+//		if (guess < ret) {
+//			printf("猜小了\n");
+//		}
+//		else if (guess > ret) {
+//			printf("猜大了\n");
+//		}
+//		else {
+//			printf("bingo\n");
+//			break;
+//		}
+//	}
+//}
+//
+//int mian() {
+//
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//
+//	do {
+//		menu();
+//		printf("cai shu zi\n");
+//		scanf_s("%d", &input);
+//
+//		switch (input) {
+//		case 1:
+//			game();
+//			break;
+//		case 0:
+//			printf("exit\n");
+//			break;
+//		default:
+//			printf("err , choise again\n");
+//			break;
+//		}
+//
+//	} while (input);
+//	return 0;
+//}
 
-void menu() {
-	printf("******************************\n");
-	printf("******		1. play		******\n");
-	printf("******		2. exit		******\n");
-	printf("******************************\n");
-}
-
-void game() {
-	int ret = rand() % 100 + 1;
-	//printf("%d\n", ret);
-	int guess = 0;
-
-	// rand function 0~32767
-
-	while (1) {
-		printf("cai shu zi:");
-		scanf_s("%d", &guess);
-		if (guess < ret) {
-			printf("猜小了\n");
-		}
-		else if (guess > ret) {
-			printf("猜大了\n");
-		}
-		else {
-			printf("bingo\n");
-			break;
-		}
-	}
-}
-
-int mian() {
-
-	int input = 0;
-	srand((unsigned int)time(NULL));
-
-	do {
-		menu();
-		printf("cai shu zi\n");
-		scanf_s("%d", &input);
-
-		switch (input) {
-		case 1:
-			game();
-			break;
-		case 0:
-			printf("exit\n");
-			break;
-		default:
-			printf("err , choise again\n");
-			break;
-		}
-
-	} while (input);
-	return 0;
-}
-
+//test
 //int main(void) {
-//
-//
+//	int i = 0;
+//	for (i = 0; i < 10; i++) {
+//		if (i = 5)
+//			printf("%d", i);
+//	}
 //
 //	return 0;
 //}
+
+//int func(int a) {
+//
+//	int b;
+//	switch (a) {
+//	case 1:b = 30;
+//	case 2:b = 20;
+//	case 3:b = 16;
+//	default:b = 0;
+//	}
+//
+//	return b;
+//}
+//int main() {
+//
+//	printf("%d", func(1));
+// 
+//}
+
+
+//int main() {
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	scanf("%d %d %d",&a, &b, &c);
+//
+//	if (a < b) {
+//		int tmp = a;
+//		a = b;
+//		b = tmp;
+//	}
+//	if (a < c) {
+//		int tmp = a;
+//		a = c;
+//		c = tmp;
+//	}
+//	if (b < c) {
+//		int tmp = b;
+//		b = c;
+//		c = tmp;
+//	}
+//	printf("%d %d %d\n", a, b, c);
+//	return 0;
+//}
+
+//int main() {
+//	int m = 0;
+//	int n = 0;
+//
+//	scanf("%d %d", &m, &n);
+//
+//	int max = 0;
+//
+//	if (m > n) {
+//		max = n;
+//	}
+//	else {
+//		max = m;
+//
+//	}
+//	while (1) {
+//		if (m % max == 0 && n % max == 0) {
+//			printf("is:%d\n", max);
+//			break;
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//int mian(void) {
+//	int m = 0;
+//	int n = 0;
+//	scanf("%d %d", &m, &n);
+//	int t = 0;
+//	while (t = m % n) {
+//		m = n;
+//		n = t;
+//	}
+//	printf("is;%d\n", n);
+//
+//	return 0;
+//}
+
+
+int main() {
+
+
+	return 0;
+}
