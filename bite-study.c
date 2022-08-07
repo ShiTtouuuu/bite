@@ -1414,9 +1414,131 @@ int main(void) {
 //		return 0;
 //}
 
-int main() {
+//函数实现打印乘法表
 
-	return 0;
-}
+//void print_table(int n) {
+//	
+//	int i = 0;
+//	for (i = 1; i <= n; i++) {
+//		int j = 0;
+//		for (j = 1; j <= i; j++) {
+//			printf("%d*%d=%d ", i, j, i * j);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main() {
+//	int n = 0;
+//	scnaf("%d", &n);
+//	print_table(n);
+//
+//	return 0;
+//}
+
 //------------------------------------------------------------------------------------- 
 //
+
+//			test
+
+//int Fun(int n) {
+//	if (n == 5)
+//		return 2;
+//	else
+//		return 2 * Fun(n + 1);
+//}
+//
+//int main() {
+//	printf("%d", Fun(2));//n = 16;
+//	return 0;
+//}
+
+//------------------------------------------------------------------------------------- 
+// 栈区 ：局部变量 函数参数 调用函数时返回值 临时的变量
+//堆栈  —  栈
+// 堆区 ：动态内存 分配
+// 静态区：全局变量 静态变量
+
+//------------------------------------------------------------------------------------- 
+//
+
+//my_strlen(char* str) {
+//	int count = 0;
+//	while (*str != '\0') {
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//
+//void reverse_string(char* str) {
+//	int left = 0;
+//	int right = my_strlen(str)-1;
+//	while (left < right) {
+//		char tmp = *(str+left);
+//		*(str + left) = *(str+right);
+//		*(str + right) = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main() {
+//	char arr[] = "abcdef";
+//	reverse_string(arr);
+//
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+my_strlen(char* str) {
+	int count = 0;
+	while (*str != '\0') {
+		count++;
+		str++;
+	}
+	return count;
+}
+
+void reverse_string(char* str) {
+	char tmp = *str;
+	int len = my_strlen(str) - 1;
+	*str = *(str + len - 1);
+	*(str + len - 1) = '\0';
+
+	if (my_strlen(str + 1) >= 2) {
+		reverse_string(str + 1);
+	}
+	*(str + len - 1) = tmp;
+
+}
+
+int main() {
+	char arr[] = "abcdef";
+	reverse_string(arr);
+
+	printf("%s\n", arr);
+	return 0;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
