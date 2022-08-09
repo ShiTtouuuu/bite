@@ -1491,41 +1491,154 @@ int main(void) {
 //	return 0;
 //}
 
-my_strlen(char* str) {
-	int count = 0;
-	while (*str != '\0') {
-		count++;
-		str++;
-	}
-	return count;
-}
+//my_strlen(char* str) {
+//	int count = 0;
+//	while (*str != '\0') {
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//
+//void reverse_string(char* str) {
+//	char tmp = *str;
+//	int len = my_strlen(str) - 1;
+//	*str = *(str + len - 1);
+//	*(str + len - 1) = '\0';
+//
+//	if (my_strlen(str + 1) >= 2) {
+//		reverse_string(str + 1);
+//	}
+//	*(str + len - 1) = tmp;
+//
+//}
+//
+//int main() {
+//	char arr[] = "abcdef";
+//	reverse_string(arr);
+//
+//	printf("%s\n", arr);
+//	return 0;
+//}
 
-void reverse_string(char* str) {
-	char tmp = *str;
-	int len = my_strlen(str) - 1;
-	*str = *(str + len - 1);
-	*(str + len - 1) = '\0';
+//------------------------------------------------------------------------------------- 
+//					用递归把每位的数加起来
 
-	if (my_strlen(str + 1) >= 2) {
-		reverse_string(str + 1);
-	}
-	*(str + len - 1) = tmp;
+//int digitsum(int i) {
+//	if (i > 9) {
+//		return digitsum(i / 10) + i % 10;
+//		//第一次等于172         +   9
+//		//第二次等于17          +   2   +   9
+//		//第三次等于1   +   7   +   2   +   9 
+//	}
+//	else
+//	{
+//		return i;
+//	}
+//}
+//
+//int main() {
+//	int i = 1729;
+//	int sum = digitsum(i);
+//	printf("%d", i);
+//	return 0;
+//}
 
-}
+//------------------------------------------------------------------------------------- 
+//				求一个数的k次方
 
+//double Fac(int i, int k) {
+//	if (k == 0) {
+//		return 1.0;
+//	}
+//	else if (k > 0) {
+//		return i * Fac(i, k - 1);
+//	}
+//	else 
+//		return 1.0 / (Fac(i, -k));
+//	
+//}
+//
+//int main() {
+//
+//	int i = 0;
+//	int k = 0;
+//	scanf("%d &d", &i ,&k);
+//	double fac = Fac(i,k);
+//	printf("%lf", i);
+//	return 0;
+//}
+
+//------------------------------------------------------------------------------------- 
+//						**************
+//						**************
+//						**		    **
+//						**   数组   **
+//						**		    **
+//						**************
+//						**************
+//------------------------------------------------------------------------------------- 
+//						   基础知识
+
+//int main() {
+//	//int arr[8];
+//	//char ch[5];
+//	//数组 里面是常量
+//	//int arr[a]; //C99语法支持 可以是变量
+//
+//	//int a = 10;
+//	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };//完全初始化
+//	//int arr[10] = { 1,2,3,4,5 };//不完全初始化
+//
+//	//int arr[] = { 1,2,3,4,5 };
+//
+//	//char ch1[6] = { 'b', 'i', 't' };
+//	//char ch2[] = { 'b','i'.'t' };
+//
+//	//char ch3[5] = "bit";// b i t /0 0
+//	//char ch4[] = "bit";//b i t /0
+//
+//	//char ch5[] = "bit";
+//	//[b i t /0]
+//	//char ch6[] = { 'b' , 'i' , 't' };
+//	//[b i t ]
+//	//没有定义数组大小的话 可能会有奇奇怪怪的东西出来 烫烫烫
+//	//打印只会在遇到 /0 的时候停下来
+//	//
+//	//以及使用strlen 求长度的时候也会出现莫名其妙的东西 知直到遇到/0
+//	//ch5 是3个数		ch6是未知数
+//	return 0;
+//}
+
+#include <string.h>
 int main() {
-	char arr[] = "abcdef";
-	reverse_string(arr);
+	//int i = 1;
+	//int arr[10] = { 0 };
+	//arr[4] = 5;
+	////[]里面就是下标
+	//printf("%d /n ", sizeof(arr));
+	//for (i = 0; i <= 10; i++) {
+	//	printf("%d ", arr[i]);
+	//}
+	//	for (i = 0; i <= 10; i++) {
+	//	printf("&arr[%d] = %p\0",i, arr[i]);
+	//}	
+		//打印每个元素的地址 4个字节一个地址 
+		//1.每个地址都是连续的 4个4个增长
+		//2.随着数组下标的增长，地址是由低到高变化的
+		//最右边的是高地址
+		//最左边的是低地址
 
-	printf("%s\n", arr);
+		int arr[10] = { 1,2,3,4,5,6,7,8,9,10, };
+		int* p = arr;
+		int i = 0;
+		for (i = 0; i < 10; i++) {
+			printf("%d\n", *p);
+			p++;
+		}
+
 	return 0;
 }
-
- 
-
-
-
-
 
 
 
