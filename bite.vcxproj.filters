@@ -24,6 +24,18 @@
     <ClCompile Include="sub.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="shaolei.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shaolei_test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sanziqi_test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sanziqi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
@@ -31,6 +43,12 @@
     </ClInclude>
     <ClInclude Include="sub.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shaolei.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sanziqi.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

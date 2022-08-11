@@ -130,10 +130,16 @@
   <ItemGroup>
     <ClCompile Include="add.c" />
     <ClCompile Include="bite-study.c" />
+    <ClCompile Include="sanziqi.c" />
+    <ClCompile Include="sanziqi_test.c" />
+    <ClCompile Include="shaolei.c" />
     <ClCompile Include="sub.c" />
+    <ClCompile Include="shaolei_test.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />
+    <ClInclude Include="sanziqi.h" />
+    <ClInclude Include="shaolei.h" />
     <ClInclude Include="sub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
