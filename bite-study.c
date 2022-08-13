@@ -1984,9 +1984,88 @@ int main(void) {
 //	return 0;
 //}
 
+//int main() {
+//	//int a = 10;
+//	//printf("%p\n", &a);//取地址操作符
+//	//int* pa = &a;//pa是用来存放地址的 - pa就是一个指针
+//	//*pa = a; //*解引用操作符
+//
+//	//int a = 3.14;
+//	//int a = (int)3.14;
+//	//int a = 3;
+//	//int b = 4;
+//	//if(a == b)
+//	//if(a != b)
+//	//if(a > b)
+//	//if(a < b)
+//
+//	//==
+//
+//	//int a = 3;
+//	//int b = 0;
+//	//if (a && b) { && 与 and
+//	//}
+//	//if (a || b) { || 或 or
+//	//}
+//
+//	//int i = 0, a = 0, b = 2, c = 3, d = 4;
+//	////i = a++ && ++b && d++;
+//	//i = a++ || ++b || d++; 
+//	//printf("a = %d ,b=%d,c=%d,d=%d ",a,b,c,d);
+//
+//	//int a = 3;
+//	//int b = 0;
+//	//if (a > 5) {
+//	//	b = 1;
+//	//}
+//	//b = (a > 5 ? 1 : -1);
+//
+//	//int a = 3;
+//	//int b = 5;
+//	//int c = 0;
+//	//int d = (c = 5, a = a + c, b = a - 4, c += 5);
+//	//printf("%d\n", d);
+//}
+
+//int Add(int x, int y) {
+//	return x + y;
+//}
+//
+
+struct Book {
+
+	char name[20];
+	char id[20];
+	int price;
+
+};
+
 int main() {
+	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//printf("%d\n", arr[4]);
+	
+	//int a = 10;
+	//int b = 20;
+	//int ret = Add(a, b);
+	//printf("%d\n", ret);
 
+	//int num = 10;
+	struct Book b = { "C language", "C123456", 55 };
+	struct Book * pb = &b;
+			
+	printf("name:%s\n",pb->name);
+	printf("id:%s\n", pb->id);
+	printf("price:%d\n", pb->price);
 
+	//printf("name:%s\n", (*pb).name);
+	//printf("id:%s\n", (*pb).id);
+	//printf("price:%d\n", (*pb).price);
+
+	//printf("name:%s\n", b.name);
+	//printf("id:%s\n", b.id);
+	//printf("price:%d\n", b.price);
+
+	return 0;
 }
 
 
