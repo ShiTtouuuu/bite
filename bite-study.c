@@ -2032,43 +2032,83 @@ int main(void) {
 //}
 //
 
-struct Book {
+//struct Book {
+//
+//	char name[20];
+//	char id[20];
+//	int price;
+//
+//};
+//
+//int main() {
+//	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//printf("%d\n", arr[4]);
+//	
+//	//int a = 10;
+//	//int b = 20;
+//	//int ret = Add(a, b);
+//	//printf("%d\n", ret);
+//
+//	//int num = 10;
+//	struct Book b = { "C language", "C123456", 55 };
+//	struct Book * pb = &b;
+//			
+//	printf("name:%s\n",pb->name);
+//	printf("id:%s\n", pb->id);
+//	printf("price:%d\n", pb->price);
+//
+//	//printf("name:%s\n", (*pb).name);
+//	//printf("id:%s\n", (*pb).id);
+//	//printf("price:%d\n", (*pb).price);
+//
+//	//printf("name:%s\n", b.name);
+//	//printf("id:%s\n", b.id);
+//	//printf("price:%d\n", b.price);
+//
+//	return 0;
+//}
 
-	char name[20];
-	char id[20];
-	int price;
-
-};
-
-int main() {
-	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	//printf("%d\n", arr[4]);
-	
-	//int a = 10;
-	//int b = 20;
-	//int ret = Add(a, b);
-	//printf("%d\n", ret);
-
-	//int num = 10;
-	struct Book b = { "C language", "C123456", 55 };
-	struct Book * pb = &b;
-			
-	printf("name:%s\n",pb->name);
-	printf("id:%s\n", pb->id);
-	printf("price:%d\n", pb->price);
-
-	//printf("name:%s\n", (*pb).name);
-	//printf("id:%s\n", (*pb).id);
-	//printf("price:%d\n", (*pb).price);
-
-	//printf("name:%s\n", b.name);
-	//printf("id:%s\n", b.id);
-	//printf("price:%d\n", b.price);
-
-	return 0;
-}
-
-
+//int main() {
+//	//char a = 3;
+//	////00000000 00000000 00000000 00000011
+//	////00000011 - a
+//
+//	//char b = 127;
+//	////00000000 00000000 00000000 01111111
+//	////01111111 - b
+//	//
+//	//char c = a + b;
+//	////10000010 - c
+//	////11111111 11111111 11111111 10000010 - 补码
+//	////11111111 11111111 11111111 10000001 - 反码
+//	////10000000 00000000 00000000 01111110 - 原码
+//	////发现a和b都是char类型的 都没有达到一个int的大小
+//	////这里就会发生整形提升
+//	//printf("%d", c);
+//
+//	//--------------------------------+-+-+-+-+-+-+-+-+-+--+-+-
+//
+//	//char a = 0xb6;
+//	//short b = 0xb600;
+//	//int c = 0xb6000000;
+//	//if (a == 0xb6) {//char 整形提升 不打印
+//	//	printf("a");
+//	//}
+//	//if (b == 0xb600) {//short 整形提升 不打印
+//	//	printf("b");
+//	//}
+//	//if (c == 0xb6000000) {
+//	//	printf("c");
+//	//}
+//
+//	//----------------------
+//	char c = 1;
+//	printf("%u\n", sizeof(c));// - 1
+//	printf("%u\n", sizeof(+c));// - 4整形提升
+//	printf("%u\n", sizeof(-c));// - 4整形提升
+//	printf("%u\n", sizeof(!c));//gcc - 5
+//	return 0;
+//}
 
 
 
