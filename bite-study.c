@@ -2110,7 +2110,118 @@ int main(void) {
 //	return 0;
 //}
 
+//int main() {
+//	//int a = 4;
+//	//float b = 5;
+//	//int c = a + b * 7;//优先级决定了计算顺序
+//	//int c = a + b + 7;
+//	// 
+//	//int c = 1;
+//	//c + --c;
+//	//printf("%d", c);
+//
+//	return 0;
+//}
 
+//------------------------
+
+//void init(int arr[], int sz) {
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		arr[i] = 0;
+//	}
+//}
+//
+//void print(int arr[], int sz) {
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+//
+//void reverse(int arr[], int sz) {
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left < right) {
+//		int i = arr[left];
+//		arr[left] = arr[right];
+//		arr[right] = i;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main() {
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	
+//	print(arr, sz);
+//	
+//	reverse(arr, sz);
+//	print(arr, sz);
+//
+//	init(arr, sz);
+//
+//	print(arr, sz);
+//
+//	return 0;
+//
+//}
+
+
+//int main() {
+//	int arr1[] = { 1,3,5,7,9 };
+//	int arr2[] = { 2,4,6,8,10 };
+//	int i = 0;
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//
+//	for (i = 0; i < sz; i++) {
+//		int tmp = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = tmp;
+//		printf("arr1:%d \narr2:%d \n", arr1[i], arr2[i]);
+//
+//	}
+//
+//
+//	return 0;
+//}
+
+//------------------------------------------------------------------------------------- 
+//						****************
+//						****************
+//						**		      **
+//						**    指针    **
+//						**		      **
+//						****************
+//						****************
+//------------------------------------------------------------------------------------- 
+
+int main() {
+	//int a = 10;
+	//int *pa = &a;//拿到的是a的4个字节中第一个字节的地址
+	//*pa = 20;
+
+	//int* pa;
+	//char* pc;
+	//float* pf;
+	//printf("%d\n", sizeof(pa));
+	//printf("%d\n", sizeof(pc));
+	//printf("%d\n", sizeof(pf));
+
+	//int a = 0x11223344;
+	//char* pc = &a;
+	//*pc = 0;
+	//int *pa = &a;
+	//*pa = 0;
+
+	//指针类型的意义
+	//1.指针类型决定了：指针解引用的权限有多大
+	//2.指针类型决定了，指针走一步，能够走多远（步长）
+	return 0;
+}
 
 
 
