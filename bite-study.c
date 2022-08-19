@@ -2170,7 +2170,6 @@ int main(void) {
 //
 //}
 
-
 //int main() {
 //	int arr1[] = { 1,3,5,7,9 };
 //	int arr2[] = { 2,4,6,8,10 };
@@ -2199,34 +2198,169 @@ int main(void) {
 //						****************
 //------------------------------------------------------------------------------------- 
 
+//int main() {
+//	//int a = 10;
+//	//int *pa = &a;//拿到的是a的4个字节中第一个字节的地址
+//	//*pa = 20;
+//
+//	//int* pa;
+//	//char* pc;
+//	//float* pf;
+//	//printf("%d\n", sizeof(pa));
+//	//printf("%d\n", sizeof(pc));
+//	//printf("%d\n", sizeof(pf));
+//
+//	//int a = 0x11223344;
+//	//char* pc = &a;
+//	//*pc = 0;
+//	//int *pa = &a;
+//	//*pa = 0;
+//
+//	//指针类型的意义
+//	//1.指针类型决定了：指针解引用的权限有多大
+//	//2.指针类型决定了，指针走一步，能够走多远（步长）
+//	return 0;
+//}
+
+//------------野指针
+
+//int *test() {
+//	int a = 10;
+//	return &a;
+//}
+//
+//int main() {
+//	////这里的p就是野指针
+//	//int* p;//p是一个局部的指针变量 局部变量不初始化的化 默认是随机值
+//	//*p = 20;//
+//
+//	//指针越界访问
+//	//int arr[10] = {0};
+//	//int* p = arr;
+//	//int i = 0;
+//	//for (i = 0; i <= 10; i++) {
+//	//	*p = i;
+//	//	p++;
+//	//}
+//
+//	//非法访问内存
+//	int *p = test();
+//	*p = 20;
+//	return 0;
+//}
+
+//如何防止野指针
+
+//int main() {//指针初始化
+//	int a;
+//	printf("%d", a);
+//
+//	//当前不知道指针应该初始化什么地址的时候，字节初始化为NULL
+//	int* p = NULL;
+//	//或者明确知道初始化的值
+//	int a = 10;
+//	int* ptr = &a;
+//	//C语言本身是不会检查数据的越界行为的
+//	//指针指向空间释放及时置NULL
+//	int* p = NULL;
+//	//*p = 10;
+//	if (p != NULL) {
+//		*p = 10;
+//	}
+//	return 0;
+//}
+
+//---------------指针运算
+
+//计数器
+//int my_strlen(char*str) {
+//	int count = 0;
+//	while (*str != '\0') {
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+
+//int my_strlen(char* str) {
+//	char* start = str;
+//	while (*str != '\0') {
+//		str++;
+//	}
+//	return str - start;
+//}
+//
+//#include <string.h>
+//int main() {
+//	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//int* p = arr;
+//	//int* pend = arr + 9;
+//	//while (p <= pend) {
+//	//	printf("%d\n", *p);
+//	//	p++;
+//	//}
+//
+//	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//char c[5];
+//
+//	//printf("%d\n", &arr[9] - &arr[0]);
+//	////printf("%d\n", sizeof(arr[9]) - sizeof(arr[0]));
+//	//printf("%d\n", &arr[9] - &c[0]);//不同的指针空间会出问题
+//
+//	int len = my_strlen("abc");
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+//----------------指针和数组
+
+//int main() {
+//	//int arr[10] = { 0 };
+//	////printf("%p\n", arr);
+//	////printf("%p\n", &arr[0]);
+//	//int*p = arr;
+//	//int i = 0;
+//	//for (i = 0; i < 10; i++) {
+//	//	//printf("%p = %p\n", &arr[i], p + i);
+//	//	*(p + i) = i;
+//
+//	//}
+//	//for (i = 0; i < 10; i++) {
+//	//	//printf("%p = %p\n", &arr[i], p + i);
+//	//	printf("%d\n", *(p + i));
+//	//}
+//
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	printf("%d\n", arr[2]);
+//	printf("%d\n", p[2]);// == *(p+2)
+//
+//	//[]是一个操作符 2 和arr是两个操作数
+//	printf("%d\n", 2[arr]);
+//	printf("%d\n", arr[2]);
+//	//arr[2] == *(arr + 2) == *(2 + arr) == 2[arr]
+//
+////arr[2] == *(arr + 2 ) ==* (p + 2); == *(2 + p) == *(2 + arr) ==2[arr]
+////2[arr] == *(2 + arr)
+//	return 0;
+//}
+
+//int main() {
+//	int a = 10;
+//	int* pa = &a;//pa是指针变量，一级指针
+//
+//	int **ppa = pa;//pa也是指针 ……pa 去除pa在内存中起始地址
+//	int*** pppa = &ppa;
+//
+//	return 0;
+//}
+
 int main() {
-	//int a = 10;
-	//int *pa = &a;//拿到的是a的4个字节中第一个字节的地址
-	//*pa = 20;
+	int arr[10];//整形数组 - 存放整形的数组就是整形数组
+	char ch[5];//字符数组 - 存放的是字符
+	//指针数组 - 存放指针的数组
+	int * parr[5];
+	char* parr[5];
 
-	//int* pa;
-	//char* pc;
-	//float* pf;
-	//printf("%d\n", sizeof(pa));
-	//printf("%d\n", sizeof(pc));
-	//printf("%d\n", sizeof(pf));
-
-	//int a = 0x11223344;
-	//char* pc = &a;
-	//*pc = 0;
-	//int *pa = &a;
-	//*pa = 0;
-
-	//指针类型的意义
-	//1.指针类型决定了：指针解引用的权限有多大
-	//2.指针类型决定了，指针走一步，能够走多远（步长）
-	return 0;
 }
-
-
-
-
-
-
-
 
