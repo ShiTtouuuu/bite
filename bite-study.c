@@ -2355,12 +2355,130 @@ int main(void) {
 //	return 0;
 //}
 
-int main() {
-	int arr[10];//整形数组 - 存放整形的数组就是整形数组
-	char ch[5];//字符数组 - 存放的是字符
-	//指针数组 - 存放指针的数组
-	int * parr[5];
-	char* parr[5];
+//int main() {
+//	int arr[10];//整形数组 - 存放整形的数组就是整形数组
+//	char ch[5];//字符数组 - 存放的是字符
+//	//指针数组 - 存放指针的数组
+//	int * parr[5];
+//	char* parr[5];
+//}
 
-}
+//------------------------------------------------------------------------------------- 
+//						****************
+//						****************
+//						**		      **
+//						**    结构体  **
+//						**		      **
+//						****************
+//						****************
+//------------------------------------------------------------------------------------- 
+//
+//数组：一组相同类型的元素的集合
+//结构体：也是一些值的集合，但是 值的类型可以不同
+
+//struct B {
+//	char c;
+//	short s;
+//	double d;
+//
+//};
+//
+//struct Stu {//类型
+//	//结构的成员变量
+//	struct B sb;
+//	char name[20];//名字
+//	int age;//年龄
+//	char id[20];//学号
+//
+//}s1,s2;//s1和s2也是结构体变量
+////s1，s2 是全局变量
+//
+//int main() {
+//	struct Stu s = {{'w',20,3.14},"张三",30,"20200534"};//对象
+//	//s是局部变量
+//	//printf("%c", s.sb.c);
+//	//printf("%s", s.id);
+//	struct Stu *ps = &s;
+//	printf("%c\n", ( * ps).sb.c);
+//	printf("%c\n", ps->sb.c);
+//
+//
+//	return 0;
+//}
+
+//struct B {
+//	char c;
+//	short s;
+//	double d;
+//
+//};
+//
+//struct Stu {//类型
+//	//结构的成员变量
+//	struct B sb;
+//	char name[20];//名字
+//	int age;//年龄
+//	char id[20];//学号
+//
+//};
+//
+//void print1(struct Stu t) {
+//	printf("%c %d %lf %s %d %s\n", t.sb.c, t.sb.s, t.sb.d, t.name, t.age, t.id);
+//
+//}
+//
+//void print2(struct Stu *ps) {
+//	printf("%c %d %lf %s %d %s\n", ps->sb.c, ps->sb.s, ps->sb.d, ps->name, ps->age, ps->id);
+//
+//}
+//
+//int main() {
+//	struct Stu s = { {'w',20,3.14},"张三",30,"20200534" };//对象
+//	//写一个函数打印s的内容
+//	print1(s);//传值调用
+//	print2(&s);//传址调用
+//
+//
+//	return 0;
+//}
+
+//int add(int x, int y) {
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+//
+//int main() {
+//	int a = 3;
+//	int b = 5;
+//	int c = 0;
+//	c = add(a, b);
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
