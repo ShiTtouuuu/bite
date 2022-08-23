@@ -2455,25 +2455,258 @@ int main(void) {
 //	c = add(a, b);
 //}
 
+//------------------------------------------------------------------------------------- 
+//						****************
+//						****************
+//						**		      **
+//						**    调试    **
+//						**		      **
+//						****************
+//						****************
+//------------------------------------------------------------------------------------- 
+//
+//实用调试技巧
+
+//int main() {
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		arr[i] = i + 1;
+//	}	
+//	for (i = 0; i < sz; i++) {
+//		printf("%d\n", arr[i]);
+//	}
+//	return 0;
+//}
+
+//release 版本是不可以调试的
+// 会自主对代码进行优化
+// 测试人员测试的是release版本
+//debug 版本是可以调试的
+//包含调试信息
+//
+//因为release版本是优化的代码 debug没有的问题 release可能会有
+//
+// ----------快捷键
+// ctrl f5 执行
+// 
+// f5 启动调试
+// f9 设置/取消断点
+//
+// f11 在调试的时候 遇到函数会进入
+// f10 在调试的时候 遇到函数会直接跳过
+// 
+// fn 辅助功能键
+// shift f5 结束调试
+
+//void test2() {
+//	printf("hehe\n");
+//}
+//
+//void test1() {
+//	test2();
+//}
+//
+//void test() {
+//	test1();
+//}
+//
+//int main() {
+//	test();
+//
+//	return 0;
+//}
+
+//int main() {
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		arr[i] = i + 1;
+//	}	
+//	for (i = 0; i < sz; i++) {
+//		printf("%d\n", arr[i]);
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i = 0;
+//	int ret = 1;
+//	int sum = 0;
+//	int j = 0;
+//	for(j = 1;j <= n;j++){
+//
+//		for (i = 1; i <= j; i++) {
+//
+//			ret *= i;
+//		}
+//	sum += ret;
+//	ret = 1;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+//int main() {
+//	int i = 0;
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };//10个元素
+//	for (i = 0; i <= 12; i++) {//12个数
+//		arr[i] = 0;
+//		printf("jeje\n");
+//	}//代码死循环 最后崩溃
+//	//越界访问 强行改11 12 13 的值 
+//	//大胆
+//	return 0;
+//}
+
+//			字符串拷贝
+
+//---------------------------------------------
+//#include <string.h>
+//void my_strcpy(char*dest, char*src) {
+//	while(*src != '\0') {
+//		*dest = *src;
+//		dest++;
+//		src++;
+//	}
+//	*dest = *src;
+//}
+//int main() {
+//	char arr1[20] = "xxxxxxx";
+//	char arr2[] = "hello";
+//	my_strcpy(arr1, arr2);
+//	printf("%s", arr1);
+//	return 0;
+//}
+//------------------------------------------------
+//void my_strcpy(char* dest, char* src) {
+//	while (*src != '\0') {
+//		*dest = *src;
+//		++dest;//
+//		++src;//
+//	}
+//	*dest = *src;
+//}
+//
+//int main() {
+//	char arr1[20] = "xxxxxxx";
+//	char arr2[] = "hello";
+//	my_strcpy(arr1, arr2);
+//	printf("%s", arr1);
+//	return 0;
+//}
+//--------------------------------------
+//void my_strcpy(char* dest, char* src) {
+//	while (*dest++ = *src++) {
+//		;
+//	}
+//}
+//
+//int main() {
+//	char arr1[20] = "xxxxxxx";
+//	char arr2[] = "hello";
+//	my_strcpy(arr1, arr2);
+//	printf("%s", arr1);
+//	return 0;
+//}
+//-----------------------------------------
 
 
 
+//模拟实现字符串相关函数
+
+//#include <string.h>
+//
+//void my_strcpy(char*dest, char*src) {
+//	while (*src != '\0') {
+//		//*dest = *src;
+//		//dest++;
+//		//src++;//1
+//
+//		//*dest++ = *src++;//2
+//	}
+//	*dest = *src;//\0的copy
+//}
+//
+//void my_strcpy(char* dest, char* src) {
+//	while (*dest++ = *src++) {
+//		;
+//	}//3
+//}
+//
+//#include <assert.h>
+//void my_strcpy(char* dest, char* src) {
+//	assert(src != NULL);//断言 - 判断是不是空指针 NULL
+//						//真 即继续下一步 
+//						//假 即报错问题位置
+//	while (*dest++ = *src++) {
+//		;
+//	}//4
+//}
+//
+//#include <assert.h>
+//void my_strcpy(char* dest, const char* src) {
+//	assert(src != NULL);
+//	assert(dest != NULL);
+//
+//	//while (*src++ = *dest++) {
+//	// //src和dest位置不同 const会报错 
+//	// //并且两个数组大小不同 无法copy
+//	//	;
+//	//}
+//
+//	while (*dest++ = *src++) {
+//		;
+//	}//5
+//}
+//
+//int main() {
+//	char arr1[20] =  "xxxxxxxxxx" ;
+//	char arr2[] = "hello";
+//	my_strcpy(arr1, arr2);//右边 copy到 左边
+//	printf("%s", arr1);
+//}
 
 
+//-----------------const
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//int main() {
+//	////const 修饰变量 这个变量就被称为常变量 不能被修改 
+//	////但是本质上还是变量
+//
+//	//const int num = 20;
+//	////吧num 变成常变量 这个时候可以通过地址修改num
+//	////num = 10；
+//
+//	//const int* p = &num;
+//	////把num的地址变成常变量
+//	//////*p = 10;
+//	//int num = 0;
+//
+//	//int* const p = &num;//修饰的是指针变量p
+//
+//	int m, n, *p;
+//
+//	int const* p = &m;
+//	*p = 0;//不可以
+//	p = &n;//可以
+//
+//	int* const p = &m;
+//	*p = 0;//可以
+//	p = &n;//不可以
+//
+//	int const * const p = &m;
+//	*p = 0;//不可以
+//	p = &n;//不可以
+//
+//	//printf("%d\n", num);
+//}
 
 
 
