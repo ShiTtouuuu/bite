@@ -2708,6 +2708,159 @@ int main(void) {
 //	//printf("%d\n", num);
 //}
 
+ //------------------94.test
+
+//int main() {
+//	int a, b, c;
+//	a = 5;
+//	c = ++a;
+//	b = ++c, c++, ++a, a++;
+//	b += a++ + c;
+// 
+//	printf("%d  %d  %d", a, b, c);
+//	return 0;
+//}
+
+//-------
+
+//int NumBerOf1(int n) {//1 负数不行
+//	int count = 0;
+//	while (n) {
+//		if (n % 2 == 1) {
+//			count++;
+//		}
+//		n /= 2;
+//	}
+//	return count;
+//}
+//
+//int NumBerOf1(unsigned int n) {//2 unsigned int n
+//	int count = 0;
+//	while (n) {
+//		if (n % 2 == 1) {
+//			count++;
+//		}
+//		n /= 2;
+//	}
+//	return count;
+//}
+//
+//int NumBerOf1(int n) {// 3
+//	int count = 0;
+//	int i = 0;
+//	for (i = 0; i < 32; i++) {
+//		if (((n >> i) & 1) == 1) {
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//
+//int NumBerOf1(int n) {// 4
+//	int count = 0;
+//	while (n) {
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+////拓展：判断一个数是不是2 的n次方
+//// 2的n次方的2进制 只有1个1
+//// 所以：
+////k &(k-1)
+//
+//int main() {//计算一个数的二进制的1 的个数
+//	int n = -1;
+//	
+//	int ret = NumBerOf1(n);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//--------------
+//两个整数二进制不同个数
+
+//int NumBerOf1(int n) {// 2
+//	int count = 0;
+//	while (n) {
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+//int main() {
+//	int m = 0;
+//	int n = 0;
+//	int i = 0;
+//	scanf("%d %d", &m, &n);
+//
+//	//int count = 0;//2
+//	//int ret = m ^ n;
+//	//count = NumBerOf1(ret);
+//	//统计一下ret的2进制中有几个1，就说明m和n的二进制位中有几个不同
+//
+//	/*for (i = 0; i < 32; i++) {// 1
+//		if(((m >> i) & 1) != ((n >> i) & 1)) {
+//			count++;
+//		}
+//	}*/
+//	printf("%d", count);
+//
+//	return 0;
+//}
+
+//int main() {
+//	int n = 0;
+//	scanf("%d", &n);
+//
+//	//获取n 的二进制中的奇数位和偶数位
+//	//00000000 00000000 00000000 00001010
+//
+//	int i = 0;
+//	//打印偶数位
+//	for (i = 31; i >= 1; i-= 2) {
+//		printf("%d ", (n >> i) & 1);
+//	}
+//	printf("\n");
+//
+//	//打印奇数位
+//	for (i = 30; i >= 0; i -= 2) {
+//		printf("%d ", (n >> i) & 1);
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	int a = 10;
+//	int b = 20;
+//	a = a ^ b;
+//	b = a ^ b;//
+//	a = a ^ b;
+//	printf("a %d ,b %d", a, b);
+//	return 0;
+//}
+
+int main() {
+
+
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
